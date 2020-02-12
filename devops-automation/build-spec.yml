@@ -30,4 +30,5 @@ phases:
     commands:
       - pwd
       - echo "path of the pipeline $Env:ORBITER_PATH"
+      - cd $Env:ORBITER_PATH
       - python $Env:ORBITER_PATH\start_build.py
