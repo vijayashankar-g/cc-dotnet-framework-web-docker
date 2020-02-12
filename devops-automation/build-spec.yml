@@ -25,7 +25,7 @@ env:
 phases:
   pre_build:
     commands:
-     - New-Item -ItemType Junction -Path C:\\Src -Value $Env:CODEBUILD_SRC_DIR
+     #- New-Item -ItemType Junction -Path C:\\Src -Value $Env:CODEBUILD_SRC_DIR
   build:
     commands:
       - pwd
