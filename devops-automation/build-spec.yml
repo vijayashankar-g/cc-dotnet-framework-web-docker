@@ -1,0 +1,31 @@
+version: 0.2
+
+env:
+  variables:
+    APP_TYPE: "dotnet_msbuild-k8s"
+    BUILD_TYPE: "full"
+    APP_CSPROJ_LOC: "aspnetmvcapp"
+    DOCKER_FILE_PATH: "Dockerfile"
+    EKS_CLUSTER_NAME: "windows-prod"
+    K8S_FILE_PATH: "devops-automation/eks.yaml"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #secrets-manager:
+     # key: secret-id:json-key:version-stage:version-id
+     # key: secret-id:json-key:version-stage:version-id
+  #exported-variables:
+     # - variable
+     # - variable
+  git-credential-helper: yes
+
+phases:
+  pre_build:
+    commands:
+     - New-Item -ItemType Junction -Path C:\\Src -Value $Env:CODEBUILD_SRC_DIR
+  build:
+    commands:
+      - pwd
+      - echo "path of the pipeline $Env:ORBITER_PATH"
+      - python $Env:ORBITER_PATH\start_build.py
