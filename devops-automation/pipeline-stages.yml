@@ -1,0 +1,10 @@
+stages:
+  - common_git_checkout
+  - dotnet_msbuild_set_properties
+  - dotnet_msbuild_install_serverside_modules
+  - dotnet_msbuild_build_serverside
+  - dotnet_msbuild_run_serverside_unit_tests
+  - dotnet_msbuild_code_analysis
+  - dotnet_msbuild_publish_generic_assets
+  - docker_build_publish
+  - eks_deploy

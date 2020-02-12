@@ -8,6 +8,8 @@ env:
     DOCKER_FILE_PATH: "Dockerfile"
     EKS_CLUSTER_NAME: "windows-prod"
     K8S_FILE_PATH: "devops-automation/eks.yaml"
+    K8S_REGION: "us-west-2"
+    PIPELINE_OVERRIDE: "devops-automation/pipeline-stages.yml"
      # key: "value"
   #parameter-store:
      # key: "value"
