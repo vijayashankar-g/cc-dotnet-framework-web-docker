@@ -18,11 +18,11 @@ spec:
     spec:
       containers:
       - name: windows-server-iis
-        image: mcr.microsoft.com/windows/servercore:1809
+        image: 501361998365.dkr.ecr.us-west-2.amazonaws.com/cc-dotnet-framework-web-docker:Latest
         ports:
         - name: http
           containerPort: 80
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
       nodeSelector:
         beta.kubernetes.io/os: windows
 ---
