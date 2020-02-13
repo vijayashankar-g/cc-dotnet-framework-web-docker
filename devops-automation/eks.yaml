@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: windows-server-iis
-        image: 501361998365.dkr.ecr.us-west-2.amazonaws.com/cc-dotnet-framework-web-docker:Latest
+        image: auto-replace-image
         ports:
         - name: http
           containerPort: 80

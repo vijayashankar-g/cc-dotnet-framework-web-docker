@@ -23,12 +23,10 @@ env:
   git-credential-helper: yes
 
 phases:
-  pre_build:
-    commands:
-     #- New-Item -ItemType Junction -Path C:\\Src -Value $Env:CODEBUILD_SRC_DIR
+#   pre_build:
+#     commands:
+#      #- New-Item -ItemType Junction -Path C:\\Src -Value $Env:CODEBUILD_SRC_DIR
   build:
     commands:
-      - pwd
-      - echo "path of the pipeline $Env:ORBITER_PATH"
-      - cd $Env:ORBITER_PATH
-      - python $Env:ORBITER_PATH\start_build.py
+      - pwd; echo "path of the pipeline $Env:ORBITER_PATH"; cd $Env:ORBITER_PATH
+      - python start_build.py
