@@ -6,5 +6,5 @@ stages:
   - dotnet_msbuild_run_serverside_unit_tests
   - dotnet_msbuild_code_analysis
   - dotnet_msbuild_publish_generic_assets
-  - docker_build_publish
-  - eks_deploy
+  # - docker_build_publish
+  # - eks_deploy
