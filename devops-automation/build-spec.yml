@@ -10,7 +10,7 @@ env:
     K8S_FILE_PATH: "devops-automation/eks.yaml"
     K8S_REGION: "us-west-2"
     K8S_NAMESPACE: "application"
-    PIPELINE_OVERRIDE: "devops-automation/pipeline-stages.yml"
+    # PIPELINE_OVERRIDE: "devops-automation/pipeline-stages.yml"
      # key: "value"
   #parameter-store:
      # key: "value"
