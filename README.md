@@ -1,8 +1,19 @@
+## ORBITER UNIFIED CI/CD SOlution
 
 
 # EKS Available App Type and Build Type 
-APP_TYPE : "dotnet_msbuild-k8s"
+APP_TYPE : dotnet_msbuild-k8s, dotnet_msbuild_cdk, dotnet_core_k8s, dotnet_core_cdk
 BUILD_TYPE: "full", "build_only", "deploy_only", "rollback"
+
+# CDK Type of application takes more ENV variable
+
+```
+   BUILD_PACK: "type of the name"
+
+```
+available option : dotnet_ecs_fargate, dotnet_lambda_apigateway
+more cdk cookie cutter app can be extended
+
 
 # EKS Application, CI/CD
 
@@ -40,3 +51,9 @@ BUILD_TYPE: "full", "build_only", "deploy_only", "rollback"
 
 # EKS Manifest file
 Add kubernetes manifest file and configure to K8S_FILE_PATH ENV Variable
+
+
+# GIT Override ENV Variable
+
+CUSTOM_GIT_URL: ""
+CUSTOM_GIT_BRANCH: ""
