@@ -32,5 +32,5 @@ phases:
      - powershell Invoke-Expression $($(Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/vijayashankar-g/aws-code-pipeline-install-scripts/master/windows/orbiter-install.ps1)).Content
   build:
     commands:
-      - pwd; echo "path of the pipeline $Env:ORBITER_PATH"; cd $Env:ORBITER_PATH
+      - powershell echo "path of the pipeline $Env:ORBITER_PATH"; powershell cd $Env:ORBITER_PATH
       - python start_build.py
