@@ -8,7 +8,7 @@ Tech Stack: AWS Code Pipeline, Code Build, AWS CDK, Python Utility
 
 # EKS Available App Type and Build Type 
 APP_TYPE : dotnet_msbuild-k8s, dotnet_msbuild_cdk, dotnet_core_k8s, dotnet_core_cdk
-BUILD_TYPE: "full", "build_only", "deploy_only", "rollback"
+BUILD_TYPE: "full", "build_only", "deploy", "rollback", "delete"
 
 # CDK Type of application takes more ENV variable
 
