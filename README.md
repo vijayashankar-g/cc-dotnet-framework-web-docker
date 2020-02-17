@@ -1,5 +1,10 @@
 ## orbiter unified ci/cd solutions
 
+# Demo Scope
+Application Type : Dotnet Core , Dotnet Framework
+Target : AWS ECS, EKS
+Tech Stack: AWS Code Pipeline, Code Build, AWS CDK, Python Utility
+
 
 # EKS Available App Type and Build Type 
 APP_TYPE : dotnet_msbuild-k8s, dotnet_msbuild_cdk, dotnet_core_k8s, dotnet_core_cdk
@@ -14,6 +19,19 @@ BUILD_TYPE: "full", "build_only", "deploy_only", "rollback"
 available option : dotnet_ecs_fargate, dotnet_lambda_apigateway
 more cdk cookie cutter app can be extended
 
+CDK Override Option
+```
+    cdk_path: 'aws_ref_cdk/python/ecs/fargate-service-with-autoscaling'
+    cdk_app_name: 'cdk_default_ecs_app_name'
+    ecs_fargate_cluster_name: 'cluster'
+    ecs_fargate_service_name: 'service'
+    as_max_capacity: '1'
+    as_target_utilization_percent: '50'
+    as_scale_in_cooldown: '60'
+    as_scale_out_cooldown: '60' 
+    ecs_cpu: '512'
+    ecs_cpu_in_mb: '1024'
+```
 
 # EKS Application, CI/CD
 
