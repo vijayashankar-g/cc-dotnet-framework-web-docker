@@ -6,7 +6,7 @@ env:
     BUILD_TYPE: "full"
     APP_CSPROJ_LOC: "aspnetmvcapp"
     DOCKER_FILE_PATH: "Dockerfile"
-    EKS_CLUSTER_NAME: "windows-prod"
+    EKS_CLUSTER_NAME: "windows-eks"
     K8S_FILE_PATH: "devops-automation/eks.yaml"
     K8S_REGION: "us-west-2"
     K8S_NAMESPACE: "application"
