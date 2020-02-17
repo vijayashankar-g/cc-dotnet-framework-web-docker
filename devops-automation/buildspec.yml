@@ -29,7 +29,7 @@ phases:
       dotnet: 3.1
       nodejs: 12.14
     commands:
-     - powershell Invoke-Expression $($(Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/vijayashankar-g/aws-code-pipeline-install-scripts/master/windows/orbiter-install.ps1)).Content
+     - powershell Invoke-Command $($(Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/vijayashankar-g/aws-code-pipeline-install-scripts/master/windows/orbiter-install.ps1)).Content
   build:
     commands:
       - powershell echo "path of the pipeline $Env:ORBITER_PATH"; powershell cd $Env:ORBITER_PATH
