@@ -1,4 +1,4 @@
-## ORBITER UNIFIED CI/CD SOlution
+## orbiter unified ci/cd solutions
 
 
 # EKS Available App Type and Build Type 
